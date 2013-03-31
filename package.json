@@ -1,0 +1,19 @@
+{
+  "name": "jquery.onfontresize",
+  "version": "1.1.0",
+  "description": "jQuery event that triggers when the browser font is resized",
+  "main": "jquery.onfontresize.js",
+  "repository": {
+    "type": "git",
+    "url": "https://ginader@github.com/ginader/jquery.onfontresize"
+  },
+  "author": "Tom Deater",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-remove-logging": "~0.1.0"
+  }
+}
