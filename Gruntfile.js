@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       ' * Copyright (c) 2008 Tom Deater (http://www.tomdeater.com) \n' +
       ' * Licensed under the MIT License: \n' +
       ' * http://www.opensource.org/licenses/mit-license.php \n' +
-      ' */',
+      ' */ \n',
     jshint: {
       options: {
         curly: true,
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
     watch: {
       gruntfile: {
         files: '<%= jshint.files %>',
-        tasks: ['jshint']
+        tasks: ['jshint', 'uglify']
       }
     },
     uglify: {
