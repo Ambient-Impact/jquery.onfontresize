@@ -21,7 +21,10 @@ jQuery.onFontResize = (function ($) {
 			.css({width: "100em", height: "10px", position: "absolute", borderWidth: 0, top: "-5000px", left: "-5000px"})
 			.appendTo("body");
 
-		if ($.browser.msie) {
+		var bMatch = /(msie) ([\w.]+)/.exec(navigator.userAgent.toLowerCase()) || [],
+			browser = bMatch[1] || "";
+
+		if (browser == 'msie' ) {
 			// use IE's native iframe resize event
 			$resizeframe.bind("resize", function () {
 				$.onFontResize.trigger($resizeframe[0].offsetWidth / 100);
