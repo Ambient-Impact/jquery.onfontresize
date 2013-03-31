@@ -29,14 +29,14 @@ jQuery.onFontResize = (function ($) {
 		} else {
 			// everyone else uses script inside the iframe to detect resize
 			var doc = $resizeframe[0].contentWindow || $resizeframe[0].contentDocument || $resizeframe[0].document;
-			doc = doc.document || doc; 
+			doc = doc.document || doc;
 			doc.open();
 			doc.write('<div id="em" style="width:100em;height:10px;"></div>');
 			doc.write('<scri' + 'pt>window.onload = function(){var em = document.getElementById("em");window.onresize = function(){if(parent.jQuery.onFontResize){parent.jQuery.onFontResize.trigger(em.offsetWidth / 100);}}};</scri' + 'pt>');
 			doc.close();
 		}
 	});
-	
+
 	return {
 		// public method, so it can be called from within the iframe
 		trigger: function (em) {
