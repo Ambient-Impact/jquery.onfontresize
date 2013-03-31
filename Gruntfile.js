@@ -8,6 +8,7 @@ module.exports = function(grunt) {
       ' * Copyright (c) 2008 Tom Deater (http://www.tomdeater.com) \n' +
       ' * Licensed under the MIT License: \n' +
       ' * http://www.opensource.org/licenses/mit-license.php \n' +
+      ' * Updated by Dirk Ginader: <%= grunt.template.today("yyyy-mm-dd") %> \n' +
       ' */ \n',
     jshint: {
       options: {
