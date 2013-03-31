@@ -12,15 +12,15 @@
  * "data" contains the current size of 1 em unit (in pixels)
  * 
  */
- 
+
 jQuery.onFontResize = (function ($) {
 	// initialize
 	$(document).ready(function () {
 		var $resizeframe = $("<iframe />")
-			.attr("id", "frame-onFontResize" + Date.parse(new Date))
+			.attr("id", "frame-onFontResize" + Date.parse(new Date()))
 			.css({width: "100em", height: "10px", position: "absolute", borderWidth: 0, top: "-5000px", left: "-5000px"})
 			.appendTo("body");
-			
+
 		if ($.browser.msie) {
 			// use IE's native iframe resize event
 			$resizeframe.bind("resize", function () {
